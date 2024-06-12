@@ -1,0 +1,5 @@
+TH1f h1("h1", "Muon Energy After Nozzle(GeV)",200,0,1000);
+events ->Draw ("gen_e_after_nozzle >>h1");
+gStyle -> SetOptFit(1111);
+h1.Fit("gaus","","",825,1000);
+h1.Draw();
